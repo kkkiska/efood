@@ -1,0 +1,37 @@
+// Цветовые переменные 
+$bg-color: #8697e415;
+$text-color: #363853;
+$primary-color: #FF7A50;
+
+// Типографика
+$font-family: "Rubik", sans-serif;
+$font-weights: (
+  light: 300,
+  regular: 400,
+  big: 500
+);
+$font-size-base: 20px;
+$line-height-base: 1.6;
+$font-scale: (
+  very-small: 0.7,  // 14px
+  card: 0.75, // 15px
+  small: 0.8,       // 16px
+  smaller: 0.9, // 18px
+  base: 1, // 20px
+  places: 1.2,   // 24px
+  medium: 1.8, // 36px
+  large: 2, // 40px
+  xlarge: 3.3 // 66px
+);
+
+// Отступы
+$container-padding-desktop: 136px;
+
+// Брейкпоинты
+$breakpoints: (
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 1440px
+);
+
+

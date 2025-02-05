@@ -1,0 +1,29 @@
+// main.scss
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/layout';
+
+// Pages
+@import 'pages/main-page';
+
+// Componentes 
+@import 'components/logo';
+@import 'components/button';
+@import 'components/tabs';
+@import 'components/menu-card';
+@import 'components/section-title';
+
+// Themes
+@import 'themes/dark';
+@import 'themes/light';

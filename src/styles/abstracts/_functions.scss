@@ -1,0 +1,19 @@
+@function get-font-weight($key) {
+    @return map-get($font-weights, $key);
+}
+
+@function rem($px, $base-font-size: 16px) {
+    @return $px / $base-font-size * 1rem;
+}
+
+@function font-size($key) {
+    @return map-get($font-scale, $key) * $font-size-base;
+}
+
+@function adaptive-padding($base-padding, $breakpoint-width) {
+    @return calc(#{$base-padding} * (100vw / #{$breakpoint-width}));
+}
+
+@function breakpoint($key) {
+    @return map-get($breakpoints, $key);
+  }

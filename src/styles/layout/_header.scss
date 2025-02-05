@@ -1,0 +1,232 @@
+.header {
+    // height: 50px;
+    z-index: 3;
+    position: fixed;
+    width: 100vw;
+    background-color: #F5F6FC;
+    &__inner {
+        margin-top: 24px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__panel {
+        margin-left: 50px;
+        display: flex;
+        width: 790px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__nav-list {
+        display: flex;
+        
+    }
+
+    &__nav-item.active a {
+        color: $primary-color
+    }
+
+    &__actions {
+        width: 25px;
+        height: 25px;
+
+        img {
+            @include flex-center
+        }
+    }
+
+    &__button {
+        width: 120px;
+        height: 50px;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    @media (max-width: 1000px) {
+        &__panel {
+            display: none;
+
+        }
+
+        &__burger {
+            display: block;
+            z-index: 2;
+        }
+    }
+}
+
+.burgerActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    padding-top: 104px;
+    left: 0;
+    background-color: #F5F6FC;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.burgerActive .header__nav-item {
+    margin-top: 40px;
+}
+
+.burgerActive .header__actions {
+    margin-top: 20px;
+}
+
+.burgerActive .header__button {
+    margin-top: 20px;
+}
+
+.modal {
+    position: fixed;
+    width: 500px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    z-index: 6;
+
+
+    &-close img {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__title {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: font-size(places);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__input {
+        margin-top: 40px;
+        padding-left: 30px;
+        font-size: 17px;
+        height: 50px;
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        width: 300px;
+        outline:none;
+    }
+
+    &__button {
+        width: 150px;
+        height: 50px;
+        margin-top: 30px
+    }
+
+    @media (max-width: 580px) {
+        width: 400px;
+    }
+
+    @media (max-width: 430px) {
+        width: 280px;
+        &__input {
+            width: 200px
+        }
+    }
+}
+
+.modal-bg {
+    @include flex-center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.68);
+    z-index: 5;
+}
+
+#cart {
+    @media (max-width: 1230px) {
+        display: none;
+    }
+}
+
+.cart {
+    @media (max-width: 1230px) {
+        display: none;
+    }
+    width: 1000px;
+    height: 700px;
+    &__inner {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    &__row {
+        display: flex;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    &__photo {
+        width: 100px;
+        text-align: center;
+
+    }
+
+    &__name {
+        padding-left: 50px;
+        width: 400px;
+
+    }
+
+    &__price {
+        width: 150px;
+    }
+
+    &__delete {
+        width: 100px;
+        text-align: center;
+    }
+    &__delete img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    &__total {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+
+    &__order {
+        width: 200px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    &__empty {
+        margin-top: 20px;
+        margin-left: 20px;
+        opacity: .6;
+    }
+}

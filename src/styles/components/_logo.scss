@@ -1,0 +1,10 @@
+.logo {
+    font-size: 33px;
+    line-height: 39px;
+    font-weight: get-font-weight(big);
+    z-index: 2;
+
+    span {
+        color: $primary-color;
+    }
+}
