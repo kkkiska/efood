@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/efood/static/css/main.f25b16ac.css",
+    "main.js": "/efood/static/js/main.4ff1793c.js",
+    "static/js/453.9e4f98f6.chunk.js": "/efood/static/js/453.9e4f98f6.chunk.js",
+    "static/media/greeting.svg": "/efood/static/media/greeting.39615926cd8a9aa9b5ff24ffea67f50d.svg",
+    "static/media/feedback.png": "/efood/static/media/feedback.6284fa0321e8971b248c.png",
+    "static/media/delivery.png": "/efood/static/media/delivery.c792c91323189869ba47.png",
+    "static/media/app.png": "/efood/static/media/app.3cedb0d721452f5b1428.png",
+    "static/media/googleplay.svg": "/efood/static/media/googleplay.ed745854534a974bcf2ff8268dcbe535.svg",
+    "static/media/appstore.svg": "/efood/static/media/appstore.d209c45c606ed15435b98635bf6ea8d2.svg",
+    "static/media/timer.svg": "/efood/static/media/timer.e71382455cf0abc3d41ef7747c5d063d.svg",
+    "static/media/pinterest.svg": "/efood/static/media/pinterest.7e4865b4cf0bcbab26d90a88ea371ff9.svg",
+    "static/media/instagram.svg": "/efood/static/media/instagram.5454f6cb3e33bf89916710c45de30505.svg",
+    "static/media/cart.svg": "/efood/static/media/cart.d2d8039e453f5920dc7d48a530dc135f.svg",
+    "static/media/twitter.svg": "/efood/static/media/twitter.00c0bb91ab048b893e03d9fefe2d6cb2.svg",
+    "static/media/arrow.svg": "/efood/static/media/arrow.1fa95ab5b260b559e6ec6ca3bdc3998c.svg",
+    "static/media/calling.svg": "/efood/static/media/calling.883ee02c9096a2451862ad93fe06b76c.svg",
+    "index.html": "/efood/index.html",
+    "static/media/location.svg": "/efood/static/media/location.9a2613c1f4f69d70fddd7976e2684a83.svg",
+    "static/media/message.svg": "/efood/static/media/message.a0fdd7789cdc86d503bf9cfe50385713.svg",
+    "static/media/subscribe.svg": "/efood/static/media/subscribe.8af6bf6ab4e4b85a273d4cf4ae2dfb1c.svg",
+    "static/media/cross.svg": "/efood/static/media/cross.ffe9672a0b41e7a57e2082de791a811b.svg",
+    "static/media/facebook.svg": "/efood/static/media/facebook.19004b2cfefb46a3cd9c46c6d4db69a4.svg",
+    "static/media/Search.svg": "/efood/static/media/Search.c0cbe33b5c96abd7bbf2d2c7a2cddb4e.svg",
+    "static/media/menu_burger.svg": "/efood/static/media/menu_burger.93b2843d1b09d8c0456a518fb688d607.svg",
+    "main.f25b16ac.css.map": "/efood/static/css/main.f25b16ac.css.map",
+    "main.4ff1793c.js.map": "/efood/static/js/main.4ff1793c.js.map",
+    "453.9e4f98f6.chunk.js.map": "/efood/static/js/453.9e4f98f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f25b16ac.css",
+    "static/js/main.4ff1793c.js"
+  ]
+}
