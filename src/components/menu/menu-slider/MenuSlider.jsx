@@ -3,11 +3,10 @@ import { menuData } from "../menuData"
 import MenuCard from "./MenuCard"
 import SliderArrow from "../tabs/images/SliderArrow";
 
-const MenuSlider = ({category, cartItems, cartActions}) => {
+const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentIndex}) => {
     const items = menuData[category] || [];
     const isItemInCart = (itemName) => cartItems.some(item => item.name === itemName);
 
-    const [currentIndex, setCurrentIndex] = useState(0);
     const maxIndex = Math.ceil(items.length / 4) - 1
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>

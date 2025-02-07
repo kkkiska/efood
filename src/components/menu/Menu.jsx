@@ -4,15 +4,16 @@ import MenuSlider from "./menu-slider/MenuSlider"
 
 const Menu = ({cartItems, cartActions}) => {
     const [category, setCategory] = useState('Burger')
-
+    const [currentIndex, setCurrentIndex] = useState(0);
     const TabHandler = (name) => {
+        setCurrentIndex(0)
         setCategory(name)
     }
 
     return (
         <>
             <TabsBar category={category} TabHandler={TabHandler} />
-            <MenuSlider category={category} cartItems={cartItems} cartActions={cartActions} />
+            <MenuSlider category={category} cartItems={cartItems} cartActions={cartActions} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </>
     )
 }
