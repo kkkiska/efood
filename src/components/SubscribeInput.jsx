@@ -19,6 +19,7 @@ const SubscribeInput = () => {
             localStorage.setItem('mail', JSON.stringify(mailData));
         }
         showModal(true)
+        setMail('')
     }
     return (
         <>

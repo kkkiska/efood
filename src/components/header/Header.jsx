@@ -1,5 +1,4 @@
 import Logo from "../UI/Logo";
-import searchImg from "../../images/Search.svg";
 import cartImg from "../../images/cart.svg"
 import Button from "../UI/Button"
 import menuBurger from "../../images/menu_burger.svg"
@@ -7,6 +6,8 @@ import React, { useState, useEffect } from "react";
 import SignUpForm from "./SignUpForm";
 import Modal from "../UI/Modal";
 import Cart from "../Cart";
+import SearchIcon from "./SearchIcon";
+import CartIcon from "./CartIcon";
 
 const Header = ({cartItems, cartActions}) => {
     const [modalIsOpenAuthState, openModalSwitchAuth] = useState(false)
@@ -52,10 +53,10 @@ const Header = ({cartItems, cartActions}) => {
                         <li className="header__nav-item"><a href="#">Top cities</a></li>
                         <li className="header__nav-item"><a href="#">Contract</a></li>
                         <button className="header__actions" id="search">
-                            <img src={searchImg}></img>
+                            <SearchIcon />
                         </button>
                         <button className="header__actions" onClick={openModalCart} id="cart">
-                            <img src={cartImg}></img>
+                            <CartIcon />
                         </button>
                         <Button className="header__button" onClick={openModalAuth}>Sign Up</Button>
                     </div>

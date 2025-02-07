@@ -32,12 +32,22 @@
         color: $primary-color
     }
 
+    &__nav-item a:hover {
+        color: $primary-color;
+    }
+
     &__actions {
         width: 25px;
         height: 25px;
 
-        img {
+        svg {
             @include flex-center
+        }
+
+        &:hover {
+            svg g path, svg g ellipse, svg path {
+                stroke: $primary-color;
+            }
         }
     }
 
