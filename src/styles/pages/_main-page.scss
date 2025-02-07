@@ -536,6 +536,39 @@
         margin-right: 15px;
     }
 
+    &__modal {
+        width: 550px;
+        height: 150px;
+
+        @media (max-width: 600px) {
+            width: 400px;
+
+            &-title {
+                font-size: font-size(smaller);
+            }
+            
+        }
+
+        @media (max-width: 450px) {
+            width: 350px;
+
+            &-title {
+                font-size: font-size(small);
+            }
+            
+        }
+
+        @media (max-width: 375px) {
+            width: 290px;
+            text-align: center;
+
+            &-title {
+                font-size: font-size(small);
+            }
+            
+        }
+    }
+
     @media (max-width: 1300px) {
         &__form {
             width: 500px;
