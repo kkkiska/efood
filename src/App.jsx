@@ -9,16 +9,15 @@ import icon2 from './images/Delivery icon.png'
 import icon3 from './images/Timer icon.png'
 import appStore from './images/appstore.svg'
 import googlePlay from './images/googleplay.svg'
-import feedback from './images/feedback.png'
 import app from './images/app.png'
 import './styles/main.scss';
 import Menu from './components/menu/Menu'
 import SectionTitle from './components/UI/SectionTitle';
 import PlacesContainer from './components/places/PlacesContainer';
-import FeedbackArrow from './components/FeedbackArrow';
 import SubscribeInput from './components/SubscribeInput';
 import { useEffect, useState } from 'react';
 import MakeModal from './components/MakeModal';
+import Feedback from './components/feedback/Feedback';
 
 function App() {
   const [cartData, setCartData] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
@@ -117,31 +116,7 @@ function App() {
               </div>
               <img className='download__illustration' src={app} alt="" />
           </section>
-          <section className="feedback">
-            <SectionTitle className="feedback__title">What Our Client Are&nbsp;<MarkingText>Saying</MarkingText></SectionTitle>
-            <div className="feedback__container">
-              <img className='feedback__illustration' src={feedback} alt="" />
-              <div className="feedback__info">
-                <div className="feedback__info-text-wrapper">
-                  <div className="feedback__info-qoute">“</div>
-                  <div className="feedback__info-text">
-                    EFood has the most intriguing food order system in the country. UI in both their app and web Is very simple and easy to use, enhancing the UX. Their delivery men are also quite professional and knows the neighborhood well. Till now I never had to guide them to my address for delivery; 
-                  </div>
-                  <div className="feedback__info-qoute last">“</div>
-                </div>
-                <div className="feedback__bottom">
-                  <div className="feedback__author">
-                    <MarkingText className="feedback__author-name">Anglina Jole</MarkingText>
-                    <div className="feedback__author-shortdescr">Food lover</div>
-                  </div>
-                  <div className="feedback__actions">
-                    <FeedbackArrow className="feedback__arrow"/>
-                    <FeedbackArrow className="feedback__arrow"/>
-                  </div>
-              </div>
-              </div>
-            </div>
-          </section>
+          <Feedback />
           <section className="subscribe">
             <div className="subscribe__title">Subscribe to get the Latest Offer</div>
             <div className="subscribe__subtitle">Get our daily updates by subscribing to our newspaper, please drop your email below</div>

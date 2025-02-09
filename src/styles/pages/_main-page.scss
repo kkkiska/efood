@@ -384,6 +384,18 @@
         }
     }
 
+    &__slider {
+        min-width: 513px;
+        max-width: 513px;
+        overflow: hidden;
+        display: flex;
+
+        &-content {
+            transition: .5s;
+            display: flex;
+        }
+    }
+
     &__info {
         display: flex;
         position: relative;
