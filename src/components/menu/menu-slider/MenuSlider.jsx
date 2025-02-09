@@ -3,7 +3,7 @@ import { menuData } from "../menuData"
 import MenuCard from "./MenuCard"
 import SliderArrow from "../tabs/images/SliderArrow";
 
-const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentIndex}) => {
+const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentIndex, authState, openModal}) => {
     const items = menuData[category] || [];
     const isItemInCart = (itemName) => cartItems.some(item => item.name === itemName);
 
@@ -31,6 +31,8 @@ const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentI
                 rating={card.rating}
                 inCart={isItemInCart(card.name)}
                 actions={cartActions}
+                authState={authState}
+                openModal={openModal}
         />
     )
     return (

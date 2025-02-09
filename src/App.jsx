@@ -18,25 +18,47 @@ import PlacesContainer from './components/places/PlacesContainer';
 import FeedbackArrow from './components/FeedbackArrow';
 import SubscribeInput from './components/SubscribeInput';
 import { useEffect, useState } from 'react';
+import MakeModal from './components/MakeModal';
 
 function App() {
-  const [cartItems, setCartItems] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
+  const [cartData, setCartData] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
+  const [authUser, setAuthUser] = useState(localStorage.getItem('authUser') || '')
+  const [modal, openModal]= useState('')
 
   const addToCart = (item) => {
-      setCartItems((prevItems) => [...prevItems, item]);
+    setCartData((prevCartData) => {
+      const updatedCartData = { ...prevCartData };
+      if (updatedCartData[authUser]) {
+          updatedCartData[authUser] = [
+              ...(updatedCartData[authUser]),
+              item
+          ];
+      } else {
+          updatedCartData[authUser] = [item];
+      }
+      localStorage.setItem('cart', JSON.stringify(updatedCartData)); 
+      console.log(updatedCartData)
+      return updatedCartData;
+  });
   };
 
   const removeFromCart = (itemName) => {
-      setCartItems((prevItems) => prevItems.filter((item) => item.name !== itemName));
+    setCartData((prevCartData) => {
+      const updatedCartData = { ...prevCartData };
+      if (updatedCartData[authUser]) {
+          updatedCartData[authUser] = updatedCartData[authUser].filter(
+              (cartItem) => cartItem.name !== itemName
+          );
+      }
+      localStorage.setItem('cart', JSON.stringify(updatedCartData)); 
+      console.log(updatedCartData)
+      return updatedCartData;
+    });
   };
-
-  useEffect(() => {
-      localStorage.setItem('cart', JSON.stringify(cartItems));
-  }, [cartItems]);
 
   return (
     <>
-      <Header cartItems={cartItems} cartActions={{addToCart, removeFromCart}}/>
+      <Header cartItems={cartData[authUser] || []} cartActions={{addToCart, removeFromCart}} authState={[authUser, setAuthUser]}/>
       <div className="container">
         <main className='main'>
           <section className='greeting'>
@@ -54,7 +76,7 @@ function App() {
           </section>
           <section className='menu' id='menu'>
             <SectionTitle className='menu-title'>Our Popular&nbsp;<MarkingText>Category</MarkingText></SectionTitle>
-            <Menu cartItems={cartItems} cartActions={{addToCart, removeFromCart}}/>
+            <Menu cartItems={cartData[authUser] || []} cartActions={{addToCart, removeFromCart}} authState={[authUser, setAuthUser]} openModal={openModal}/>
           </section>
           <section className="delivery">
             <img className='delivery__illustration' src={delivryImg} alt="" />
@@ -128,6 +150,7 @@ function App() {
         </main> 
         <Footer />
       </div>
+      <MakeModal modalState={[modal, openModal]} />
     </>
   );
 }

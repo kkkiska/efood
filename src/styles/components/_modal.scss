@@ -1,0 +1,151 @@
+.modal {
+    color: $text-color;
+    position: fixed;
+    width: 500px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    z-index: 6;
+
+
+    &-close img {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__title {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: font-size(places);
+    }
+
+    &__description {
+        margin-top: 50px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__notification {
+        padding: 30px;
+        height: auto;
+    }
+
+    &__input {
+        margin-top: 40px;
+        padding-left: 30px;
+        font-size: 17px;
+        height: 50px;
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        width: 300px;
+        outline:none;
+    }
+
+    &__button {
+        width: 150px;
+        height: 50px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 580px) {
+        width: 400px;
+    }
+
+    @media (max-width: 430px) {
+        width: 280px;
+        &__input {
+            width: 200px
+        }
+    }
+}
+
+.modal-bg {
+    @include flex-center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.68);
+    z-index: 5;
+}
+
+.cart {
+    @media (max-width: 1230px) {
+        display: none;
+    }
+    width: 1000px;
+    height: 700px;
+    &__inner {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    &__row {
+        display: flex;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    &__photo {
+        width: 100px;
+        text-align: center;
+
+    }
+
+    &__name {
+        padding-left: 50px;
+        width: 400px;
+
+    }
+
+    &__price {
+        width: 150px;
+    }
+
+    &__delete {
+        width: 100px;
+        text-align: center;
+    }
+    &__delete img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    &__total {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+
+    &__order {
+        width: 200px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    &__empty {
+        margin-top: 20px;
+        margin-left: 20px;
+        opacity: .6;
+    }
+}

@@ -1,7 +1,10 @@
 import Star from "./Star"
 import Button from "../../UI/Button"
+import { useState } from "react";
+import Modal from "../../UI/Modal";
 
-const MenuCard = ({name, price, imgPath, rating, inCart, actions}) => {
+const MenuCard = ({name, price, imgPath, rating, inCart, actions, authState, openModal}) => {
+    const [authUser, setAuthUser] = authState;
     const {addToCart, removeFromCart} = actions
     const ratingArray = []
     for (let i = 0; i < Math.floor(rating); i++) {
@@ -15,10 +18,14 @@ const MenuCard = ({name, price, imgPath, rating, inCart, actions}) => {
     }
 
     const addtoCart = (props) => {
-        if (!inCart) {
-            addToCart(props);
+        if (authUser) {
+            if (!inCart) {
+                addToCart(props);
+            } else {
+                removeFromCart(props.name);
+            }
         } else {
-            removeFromCart(props.name);
+            openModal('notification-cart')
         }
     }
 
