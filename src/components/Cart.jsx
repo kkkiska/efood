@@ -14,7 +14,7 @@ const Cart = ({closeModal, cartItems, cartActions}) => {
 
     const items = cartItems.map(item => 
         <div className="cart__row">
-            <img className="cart__photo" src={item.imgPath} alt="" />
+            <img className="cart__photo" src={`${process.env.PUBLIC_URL}${item.imgPath}`} alt="" />
             <div className="cart__name">{item.name}</div>
             <div className="cart__price">{item.price}$</div>
         <div className="cart__delete"><img src={crossImg} alt="" onClick={(e) => removeFromCart(e.target.parentNode.parentNode.children[1].innerHTML)} /></div>

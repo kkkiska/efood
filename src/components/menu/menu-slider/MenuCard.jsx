@@ -32,7 +32,7 @@ const MenuCard = ({name, price, imgPath, rating, inCart, actions, authState, ope
     return (
         <div className="menu-card">
             <div className="menu-card__img">
-                <img src={imgPath} alt="" />
+                <img src={`${process.env.PUBLIC_URL}${imgPath}`}  alt="" />
                 <div className="menu-card__rating">
                     {ratingArray}
                 </div>
