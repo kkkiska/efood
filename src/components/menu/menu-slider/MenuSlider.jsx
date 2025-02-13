@@ -7,7 +7,36 @@ const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentI
     const items = menuData[category] || [];
     const isItemInCart = (itemName) => cartItems.some(item => item.name === itemName);
 
-    const maxIndex = Math.ceil(items.length / 4) - 1
+    const getCardsPerSlide = () => {
+        if (window.innerWidth > 1440) return 5; 
+        if (window.innerWidth > 1220) return 4; 
+        if (window.innerWidth > 970) return 3; 
+        if (window.innerWidth > 620) return 2; 
+        return 1; 
+    };
+
+    const getSliderWidth = () => {
+        if (window.innerWidth > 1440) return 1150; 
+        if (window.innerWidth > 1220) return 920; 
+        if (window.innerWidth > 970) return 690; 
+        if (window.innerWidth > 620) return 460; 
+        return 230; 
+    };
+
+    const [cardsPerSlide, setCardsPerSlide] = useState(getCardsPerSlide());
+    const [sliderWidth, setSliderWidth] = useState(getSliderWidth());
+
+    useEffect(() => {
+        const handleResize = () => {
+            setCardsPerSlide(getCardsPerSlide());
+            setSliderWidth(getSliderWidth());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const maxIndex = Math.ceil(items.length / cardsPerSlide) - 1
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>
           prevIndex < maxIndex ? prevIndex + 1 : 0
@@ -37,11 +66,16 @@ const MenuSlider = ({category, cartItems, cartActions, currentIndex, setCurrentI
     )
     return (
         <>
-            <div className="menu__slider">
+            <div 
+                className="menu__slider"
+                style={{
+                    width: `${sliderWidth}px`
+                }}
+            >
                 <div
                     className="menu__slider-content"
                     style={{
-                        transform: `translateX(-${currentIndex * 930}px)`,
+                        transform: `translateX(-${currentIndex * sliderWidth}px)`,
                     }}
                 >
                     {cards}

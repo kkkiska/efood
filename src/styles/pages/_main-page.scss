@@ -118,12 +118,11 @@
         margin-top: 40px;
         display: flex;
         overflow: hidden;
-        width: 930px;
         margin-left: auto;
         margin-right: auto;
         &-content {
             display: flex;
-            transition: transform 0.5s ease; /* Плавная анимация при переключении */
+            transition: transform 0.5s ease; 
             width: calc(100% * 3);
         }
 
@@ -164,10 +163,6 @@
             }
 
         }
-    }
-
-    @media (max-width: 1230px) {
-        display: none;
     }
 
 }
