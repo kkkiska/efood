@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/efood/static/css/main.89242009.css",
+    "main.css": "/efood/static/css/main.2b5bbfed.css",
     "main.js": "/efood/static/js/main.429baefa.js",
     "static/js/453.9e4f98f6.chunk.js": "/efood/static/js/453.9e4f98f6.chunk.js",
     "static/media/delivery.png": "/efood/static/media/delivery.c792c91323189869ba47.png",
@@ -22,12 +22,12 @@
     "static/media/facebook.svg": "/efood/static/media/facebook.19004b2cfefb46a3cd9c46c6d4db69a4.svg",
     "static/media/user.svg": "/efood/static/media/user.e3a7fca9f2b507f7287060f52b09657b.svg",
     "static/media/menu_burger.svg": "/efood/static/media/menu_burger.93b2843d1b09d8c0456a518fb688d607.svg",
-    "main.89242009.css.map": "/efood/static/css/main.89242009.css.map",
+    "main.2b5bbfed.css.map": "/efood/static/css/main.2b5bbfed.css.map",
     "main.429baefa.js.map": "/efood/static/js/main.429baefa.js.map",
     "453.9e4f98f6.chunk.js.map": "/efood/static/js/453.9e4f98f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89242009.css",
+    "static/css/main.2b5bbfed.css",
     "static/js/main.429baefa.js"
   ]
 }
