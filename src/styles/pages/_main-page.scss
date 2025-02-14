@@ -27,10 +27,6 @@
   }
 
   &__illustration {
-    // z-index: -1;
-    // top: calc(50% - 325px);
-    // position: absolute;
-    // right: 0;
     margin: auto 0;
     width: 650px;
     img {
@@ -109,6 +105,7 @@
   &-title {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-size: font-size(medium);
   }
 
