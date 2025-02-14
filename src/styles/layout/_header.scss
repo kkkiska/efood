@@ -1,130 +1,129 @@
 .header {
-    // height: 50px;
-    z-index: 3;
-    position: fixed;
-    width: 100vw;
-    background-color: #F5F6FC;
-    &__inner {
-        margin-top: 24px;
-        margin-bottom: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
+  // height: 50px;
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  background-color: #f5f6fc;
+  &__inner {
+    margin-top: 24px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__panel {
+    margin-left: 50px;
+    display: flex;
+    width: 790px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item.active a {
+    color: $primary-color;
+  }
+
+  &__nav-item a:hover {
+    color: $primary-color;
+  }
+
+  &__actions {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      @include flex-center;
     }
 
+    &:hover {
+      svg g path,
+      svg g ellipse,
+      svg path {
+        stroke: $primary-color;
+      }
+    }
+  }
+
+  &__button {
+    width: 120px;
+    height: 50px;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__user {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    &-name {
+      font-size: font-size(small);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: 1000px) {
     &__panel {
-        margin-left: 50px;
-        display: flex;
-        width: 790px;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    &__nav-list {
-        display: flex;
-        
-    }
-
-    &__nav-item.active a {
-        color: $primary-color
-    }
-
-    &__nav-item a:hover {
-        color: $primary-color;
-    }
-
-    &__actions {
-        width: 25px;
-        height: 25px;
-
-        svg {
-            @include flex-center
-        }
-
-        &:hover {
-            svg g path, svg g ellipse, svg path {
-                stroke: $primary-color;
-            }
-        }
-    }
-
-    &__button {
-        width: 120px;
-        height: 50px;
+      display: none;
     }
 
     &__burger {
-        display: none;
+      display: block;
+      z-index: 2;
     }
 
     &__user {
-        display: flex;
-        cursor: pointer;
-        align-items: center;
-        &-name {
-            font-size: font-size(small);
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        img {
-            width: 25px;
-            height: 25px;
-            margin-left: 10px;
-        }
+      margin-top: 20px;
     }
-
-    @media (max-width: 1000px) {
-        &__panel {
-            display: none;
-
-        }
-
-        &__burger {
-            display: block;
-            z-index: 2;
-        }
-
-        &__user {
-            margin-top: 20px;
-        }
-    }
+  }
 }
 
 .burgerActive {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    padding-top: 104px;
-    left: 0;
-    background-color: #F5F6FC;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  padding-top: 104px;
+  left: 0;
+  background-color: #f5f6fc;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .burgerActive .header__nav-item {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .burgerActive .header__actions {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .burgerActive .header__button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #cart {
-    @media (max-width: 1230px) {
-        display: none;
-    }
+  @media (max-width: 1230px) {
+    display: none;
+  }
 }

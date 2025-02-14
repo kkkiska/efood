@@ -1,178 +1,175 @@
 .modal {
-    color: $text-color;
-    position: fixed;
-    width: 500px;
-    height: 450px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    z-index: 6;
+  color: $text-color;
+  position: fixed;
+  width: 500px;
+  height: 450px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  z-index: 6;
 
+  &-close img {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
 
-    &-close img {
-        top: 10px;
-        right: 10px;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-    }
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: font-size(places);
+  }
 
-    &__title {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: center;
-        font-size: font-size(places);
-    }
+  &__description {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+  }
 
-    &__description {
-        margin-top: 50px;
-        justify-content: center;
-        text-align: center;
-    }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
 
-    &__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-    }
+  &__notification {
+    padding: 30px;
+    height: auto;
+  }
 
-    &__notification {
-        padding: 30px;
-        height: auto;
-    }
+  &__input {
+    margin-top: 40px;
+    padding-left: 30px;
+    font-size: 17px;
+    height: 50px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    width: 300px;
+    outline: none;
+  }
 
+  &__button {
+    width: 150px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 580px) {
+    width: 400px;
+  }
+
+  @media (max-width: 430px) {
+    width: 280px;
     &__input {
-        margin-top: 40px;
-        padding-left: 30px;
-        font-size: 17px;
-        height: 50px;
-        border: 2px solid $primary-color;
-        border-radius: 10px;
-        width: 300px;
-        outline:none;
+      width: 200px;
     }
-
-    &__button {
-        width: 150px;
-        height: 50px;
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @media (max-width: 580px) {
-        width: 400px;
-    }
-
-    @media (max-width: 430px) {
-        width: 280px;
-        &__input {
-            width: 200px
-        }
-    }
+  }
 }
 
 .modal-bg {
-    @include flex-center;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.68);
-    z-index: 5;
+  @include flex-center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.68);
+  z-index: 5;
 }
 
 .cart {
-    width: 1000px;
-    height: 700px;
-    &__inner {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 40px;
-        border: 2px solid black;
-        border-radius: 20px;
-        padding: 20px;
-        max-height: calc(400/800 * 100%);
-        overflow-y: auto;
-    }
+  width: 1000px;
+  height: 700px;
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: calc(400 / 800 * 100%);
+    overflow-y: auto;
+  }
 
-    &__row {
-        display: flex;
-        margin-top: calc(30/800 * 100%);
-        align-items: center;
-    }
+  &__row {
+    display: flex;
+    margin-top: calc(30 / 800 * 100%);
+    align-items: center;
+  }
 
-    &__photo {
-        width: calc(100/800 * 100%);
-        text-align: center;
+  &__photo {
+    width: calc(100 / 800 * 100%);
+    text-align: center;
+  }
 
-    }
+  &__name {
+    padding-left: calc(50 / 800 * 100%);
+    padding-right: calc(50 / 800 * 100%);
+    width: calc(400 / 800 * 100%);
+  }
 
-    &__name {
-        padding-left: calc(50/800 * 100%);
-        padding-right: calc(50/800 * 100%);
-        width: calc(400/800 * 100%);
+  &__price {
+    width: calc(150 / 800 * 100%);
+  }
 
-    }
+  &__delete {
+    width: calc(100 / 800 * 100%);
+    text-align: center;
+  }
+  &__delete img {
+    width: 40px;
+    cursor: pointer;
+  }
 
-    &__price {
-        width: calc(150/800 * 100%);
-    }
+  &__total {
+    margin-left: 10%;
+    margin-top: 10px;
+  }
 
-    &__delete {
-        width: calc(100/800 * 100%);
-        text-align: center;
-    }
-    &__delete img {
-        width: 40px;
-        cursor: pointer;
-    }
+  &__order {
+    width: 200px;
+    height: 60px;
+    margin: 0 auto;
+  }
 
-    &__total {
-        margin-left: 10%;
-        margin-top: 10px;
+  &__empty {
+    margin-top: 20px;
+    margin-left: 20px;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 1100px) {
+    width: 670px;
+    &__order {
+      margin-top: 50px;
     }
+  }
+
+  @media (max-width: 750px) {
+    width: 570px;
+    &__order {
+      margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 410px;
+    height: 600px;
+    font-size: font-size(very-small);
 
     &__order {
-        width: 200px;
-        height: 60px;
-        margin: 0 auto;
+      margin-top: 30px;
     }
+  }
 
-    &__empty {
-        margin-top: 20px;
-        margin-left: 20px;
-        opacity: .6;
-    }
-
-    @media (max-width: 1100px) {
-        width: 670px;
-        &__order {
-            margin-top: 50px;
-        }
-    }
-
-    @media (max-width: 750px) {
-        width: 570px;
-        &__order {
-            margin-top: 50px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        width: 410px;
-        height: 600px;
-        font-size: font-size(very-small);
-
-        &__order {
-            margin-top: 30px;
-        }
-    }
-
-    @media (max-width: 425px) {
-        font-size: 11px;
-        width: 310px;
-    }
+  @media (max-width: 425px) {
+    font-size: 11px;
+    width: 310px;
+  }
 }

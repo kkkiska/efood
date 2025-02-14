@@ -1,9 +1,9 @@
 body {
-    font-family: $font-family;
-    font-weight: get-font-weight(regular);
-    font-size: font-size(base);
+  font-family: $font-family;
+  font-weight: get-font-weight(regular);
+  font-size: font-size(base);
 }
 
 .primary-color-text {
-    color: $primary-color;
+  color: $primary-color;
 }

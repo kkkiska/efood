@@ -1,44 +1,44 @@
 .tabs {
-    margin-top: 55px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    &__elem {
-        flex-shrink: 0;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 20px;
-        transition: .3s;
-        width: 210px;
-        height: 70px;
-        border-radius: 8px;
-        background-color: white;
-        
-        cursor: pointer;
-        @include flex-center;
-        &.active {
-            color: white;
-            background-color: $primary-color;
-        }
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__elem {
+    flex-shrink: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+    width: 210px;
+    height: 70px;
+    border-radius: 8px;
+    background-color: white;
 
-        &.active svg g path {
-            fill: white;
-        }
-
-        &.active svg path {
-            fill: white
-        }
-
-        &-text {
-            margin-left: 8px;
-        }
+    cursor: pointer;
+    @include flex-center;
+    &.active {
+      color: white;
+      background-color: $primary-color;
     }
 
-    &__elem svg g path {
-        fill: $text-color
+    &.active svg g path {
+      fill: white;
     }
 
-    &__elem svg path {
-        fill: $text-color
+    &.active svg path {
+      fill: white;
     }
+
+    &-text {
+      margin-left: 8px;
+    }
+  }
+
+  &__elem svg g path {
+    fill: $text-color;
+  }
+
+  &__elem svg path {
+    fill: $text-color;
+  }
 }
