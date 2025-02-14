@@ -2,7 +2,6 @@ import Button from './components/UI/Button';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import MarkingText from './components/UI/MarkingText';
-import greetingImg from './images/greeting.svg';
 import delivryImg from './images/delivery.png';
 import icon1 from './images/Resturent icon.png';
 import icon2 from './images/Delivery icon.png';
@@ -84,7 +83,7 @@ function App() {
               </div>
             </div>
             <div className="greeting__illustration">
-              <img src={greetingImg}></img>
+              <img src={`${process.env.PUBLIC_URL}/images/greeting.svg`}></img>
             </div>
           </section>
           <section className="menu" id="menu">
