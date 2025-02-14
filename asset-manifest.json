@@ -1,10 +1,8 @@
 {
   "files": {
-    "main.css": "/efood/static/css/main.f25b16ac.css",
-    "main.js": "/efood/static/js/main.4ff1793c.js",
+    "main.css": "/efood/static/css/main.7b8880e0.css",
+    "main.js": "/efood/static/js/main.429baefa.js",
     "static/js/453.9e4f98f6.chunk.js": "/efood/static/js/453.9e4f98f6.chunk.js",
-    "static/media/greeting.svg": "/efood/static/media/greeting.39615926cd8a9aa9b5ff24ffea67f50d.svg",
-    "static/media/feedback.png": "/efood/static/media/feedback.6284fa0321e8971b248c.png",
     "static/media/delivery.png": "/efood/static/media/delivery.c792c91323189869ba47.png",
     "static/media/app.png": "/efood/static/media/app.3cedb0d721452f5b1428.png",
     "static/media/googleplay.svg": "/efood/static/media/googleplay.ed745854534a974bcf2ff8268dcbe535.svg",
@@ -22,14 +20,14 @@
     "static/media/subscribe.svg": "/efood/static/media/subscribe.8af6bf6ab4e4b85a273d4cf4ae2dfb1c.svg",
     "static/media/cross.svg": "/efood/static/media/cross.ffe9672a0b41e7a57e2082de791a811b.svg",
     "static/media/facebook.svg": "/efood/static/media/facebook.19004b2cfefb46a3cd9c46c6d4db69a4.svg",
-    "static/media/Search.svg": "/efood/static/media/Search.c0cbe33b5c96abd7bbf2d2c7a2cddb4e.svg",
+    "static/media/user.svg": "/efood/static/media/user.e3a7fca9f2b507f7287060f52b09657b.svg",
     "static/media/menu_burger.svg": "/efood/static/media/menu_burger.93b2843d1b09d8c0456a518fb688d607.svg",
-    "main.f25b16ac.css.map": "/efood/static/css/main.f25b16ac.css.map",
-    "main.4ff1793c.js.map": "/efood/static/js/main.4ff1793c.js.map",
+    "main.7b8880e0.css.map": "/efood/static/css/main.7b8880e0.css.map",
+    "main.429baefa.js.map": "/efood/static/js/main.429baefa.js.map",
     "453.9e4f98f6.chunk.js.map": "/efood/static/js/453.9e4f98f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f25b16ac.css",
-    "static/js/main.4ff1793c.js"
+    "static/css/main.7b8880e0.css",
+    "static/js/main.429baefa.js"
   ]
 }
