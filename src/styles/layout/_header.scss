@@ -1,5 +1,4 @@
 .header {
-  // height: 50px;
   z-index: 3;
   position: fixed;
   width: 100vw;
@@ -122,8 +121,3 @@
   margin-top: 20px;
 }
 
-#cart {
-  @media (max-width: 1230px) {
-    display: none;
-  }
-}
